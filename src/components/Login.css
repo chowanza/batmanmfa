@@ -1,0 +1,214 @@
+/* Fondo general */
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: #1c1c1c; /* Fondo oscuro */
+    font-family: 'Arial', sans-serif;
+    color: white;
+    background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.wallpapersafari.com%2F7%2F96%2FhS27XL.png&f=1&nofb=1&ipt=8a2dc4051e17d1c32eefed75e6265f7d69ded3d74b070c8c28b348f3f08e9379&ipo=images'), url('https://example.com/fog.png'); /* Fondo de Gotham y niebla */
+    background-size: cover, cover;
+    background-position: center, top center;
+    background-attachment: fixed, scroll;
+    animation: fogEffect 30s infinite linear; /* Animación de niebla */
+    margin: 0;
+  }
+
+  /* Caja del login */
+  .login-box {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 100%;
+    max-width: 380px;
+    box-sizing: border-box;
+    animation: slideIn 1s ease-out; /* Animación de entrada */
+  }
+  
+  /* Títulos */
+  .login-title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #f1c40f; /* Amarillo Batman */
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
+  
+  .login-subtitle {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    color: #ddd;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Input de usuario */
+  .login-input {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #444;
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: #333;
+    color: white;
+    box-sizing: border-box;
+  }
+  
+  .login-input::placeholder {
+    color: #aaa;
+  }
+  
+/* Botón de login con efecto de brillo */
+.login-button {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #f1c40f; 
+    color: black;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(241, 196, 15, 0.5);
+  }
+  
+  .login-button:hover {
+    background-color: #d4a40a;
+    box-shadow: 0 0 20px rgba(241, 196, 15, 1);
+    transform: scale(1.05); /* Efecto de ampliación */
+  }
+
+  .error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+  /* Divisor */
+  .divider {
+    margin: 1.5rem 0;
+    position: relative;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #bbb;
+  }
+  
+  .divider::before,
+  .divider::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 45%;
+    height: 1px;
+    background: #444;
+  }
+  
+  .divider::before {
+    left: 0;
+  }
+  
+  .divider::after {
+    right: 0;
+  }
+  
+  /* Footer */
+  .login-footer {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: #bbb;
+  }
+  
+  .login-footer a {
+    color: #f1c40f;
+    text-decoration: none;
+  }
+  
+  .login-footer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Media Queries (Responsividad) */
+  
+  /* Tablet y pantallas medianas */
+  @media (max-width: 768px) {
+    .login-title {
+      font-size: 1.6rem;
+    }
+  
+    .login-subtitle {
+      font-size: 0.9rem;
+    }
+  
+    .login-input {
+      font-size: 0.9rem;
+    }
+  
+    .login-button {
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Móviles (pantallas pequeñas) */
+  @media (max-width: 480px) {
+    .login-box {
+      padding: 1.5rem;
+    }
+  
+    .login-title {
+      font-size: 1.4rem;
+    }
+  
+    .login-subtitle {
+      font-size: 0.85rem;
+    }
+  
+    .login-input {
+      font-size: 0.85rem;
+    }
+  
+    .login-button {
+      font-size: 0.85rem;
+    }
+  }
+  
+  /* Efecto de destello en los campos de entrada */
+.login-input:focus {
+    border: 2px solid #f1c40f;
+    box-shadow: 0 0 10px rgba(241, 196, 15, 0.8);
+    animation: focusGlow 0.3s ease-out forwards;
+  }
+  
+  @keyframes focusGlow {
+    0% {
+      box-shadow: 0 0 5px rgba(241, 196, 15, 0.2);
+    }
+    100% {
+      box-shadow: 0 0 10px rgba(241, 196, 15, 0.8);
+    }
+  }
+
+  /* Animación de deslizamiento para el formulario */
+@keyframes slideIn {
+    0% {
+      transform: translateX(-100%); /* Empieza fuera de la pantalla */
+    }
+    100% {
+      transform: translateX(0); /* Termina en su posición original */
+    }
+  }
+
+/* Fondo dinámico con niebla y animación */
+@keyframes fogEffect {
+    0% {
+      background-position: 0% 0%;
+    }
+    100% {
+      background-position: 100% 100%;
+    }
+  }
