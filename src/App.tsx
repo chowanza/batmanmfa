@@ -1,16 +1,26 @@
-import React from 'react';
-import Login from './components/Login';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Login from "./components/Login";
+import Dashboard from "./components/Dashboard.tsx";
+import ProtectedRoute from "./components/ProtectedRoute";
+import ForgotPassword from "./components/ForgotPassword";
 
-const App = () => {
-  const handleLogin = (data) => {
-    console.log('Datos enviados:', data);
-    // Aquí se manejará la lógica de autenticación (simulación o conexión con backend)
-  };
-
+const App: React.FC = () => {
   return (
-    <div>
-      <Login onLogin={handleLogin} />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route
+          path="/dashboard"
+          element={
+            <ProtectedRoute>
+              <Dashboard />
+            </ProtectedRoute>
+          }
+        />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+      </Routes>
+    </Router>
   );
 };
 

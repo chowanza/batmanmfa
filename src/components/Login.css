@@ -1,4 +1,8 @@
 /* Fondo general */
+body {
+  margin: 0;
+}
+
 .login-page {
     display: flex;
     justify-content: center;
@@ -15,6 +19,20 @@
     animation: fogEffect 30s infinite linear; /* Animación de niebla */
     margin: 0;
   }
+
+  .forgot-password-link {
+    background: none;
+    border: none;
+    color: yellow;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 0.9rem;
+  }
+  
+  .forgot-password-link:hover {
+    color: grey;
+  }
+  
 
   /* Caja del login */
   .login-box {
